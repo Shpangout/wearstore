@@ -60,6 +60,12 @@ coverage.xml
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+.idea/
+venv/*
+**/migrations/*
+!/**/migrations/__init__.py
+__pycashe__/*
+wearstore/__pycache__/*
 
 # Flask stuff:
 instance/
