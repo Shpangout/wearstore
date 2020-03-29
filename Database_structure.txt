@@ -1,0 +1,43 @@
+1. Wear option (Вариант одежды: куртка, джинсы, футболка...)
+	a. Name TextField
+	b. url SlugField
+	
+2. Wear type (Мужская, Женская, Детская, Обувь)
+	Name TextField
+	url SlugField
+	
+3. Wear (одежда)
+ 	a. Name TextField
+	b. Images ImageField
+	c. Description(Описание) TextField
+	d. Size ForeignKey (тут сделать чтоб у одного варианта одежды было несколько размеров)
+	e. Available (Наличие) BooleanField
+	f. Manufacturer ForeignKey
+	g. url SlugField
+	
+4. Size (размер)
+	RU (42,44,46...)
+	EU (XS, S, M, L, XL, XXL)
+	Children size (50-56, 62-68, 68-74...)
+	Boots size (36, 38, 40...)
+	
+5. Manufacturer (Производитель)
+	Name
+	Description
+	url 
+
+6. Rating (Рейтинг вещей)
+    ip CharField
+    star ForeignKey
+    tyre ForeignKey
+
+7. Reviews (Отзывы покупателей)
+    email EmailField
+    name CharField
+    text TextField (5000)
+    parent (ForeignKey (self, SET_NULL, blank=True, null=True)
+    Wear (ForeignKey (Wear, CASCADE))
+
+
+
+
